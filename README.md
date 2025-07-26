@@ -10,8 +10,8 @@
 
 **Without big data analytics, companies are blind and deaf, wandering out onto the web like a deer on the freeway.** - Geoffrey Moore
 
-
-
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Navin%20S-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/navins/)
+[![Email](https://img.shields.io/badge/Email-contact@navin2002.com-red?style=flat&logo=gmail)](mailto:contact@navin2002.com)
 
 </div>
 
@@ -195,6 +195,31 @@ sequenceDiagram
     A->>U: Display prediction
 ```
 
+## 🛠️ Technical Details
+
+### Data Processing Pipeline
+```python
+# Data loading and preprocessing
+df = pd.read_csv(uploaded_file, encoding='utf-8')
+numeric_cols = df.select_dtypes(include=np.number).columns
+df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].mean())
+```
+
+### Machine Learning Pipeline
+```python
+# Model training and evaluation
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+```
+
+### Feature Importance Analysis
+```python
+# Feature importance calculation
+model = RandomForestRegressor()
+model.fit(X, y)
+feature_importances = model.feature_importances_
+```
 
 ## 📈 Performance Metrics
 
@@ -209,13 +234,33 @@ sequenceDiagram
 - Model persistence with secure file handling
 - Input validation for predictions
 
+## 🤝 Contributing
 
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Contact Information
+
+- **Phone**: 9786710266
+- **Email**: contact@navin2002.com
+- **LinkedIn**: [Navin S](https://www.linkedin.com/in/navins/)
+- **Location**: Coimbatore, India
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🙏 Acknowledgments
 
+- Streamlit team for the amazing framework
+- Scikit-learn for robust ML algorithms
+- Pandas and NumPy for data manipulation
+- Matplotlib and Seaborn for visualization
+
+---
 
 <div align="center">
 
